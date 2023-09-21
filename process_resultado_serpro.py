@@ -1,8 +1,8 @@
 import pandas as pd
 import re
 
-file_resultado_objetivo = "C:\\Users\\Fabio Soares\\Downloads\\ResultadoSerpro2023Objetiva.txt"
-file_resultado_pratica = "C:\\Users\\Fabio Soares\\Downloads\\ResultadoSerpro2023Pratica.txt"
+file_resultado_objetivo = "ResultadoSerpro2023Objetiva.txt"
+file_resultado_pratica = "ResultadoSerpro2023Pratica.txt"
 
 def is_number_regex(s):
     if re.match("^\d+?\.\d+?$", s) is None:
