@@ -5,7 +5,6 @@ file_resultado_objetivo = "C:\\Users\\Fabio Soares\\Downloads\\ResultadoSerpro20
 file_resultado_pratica = "C:\\Users\\Fabio Soares\\Downloads\\ResultadoSerpro2023Pratica.txt"
 
 def is_number_regex(s):
-    """ Returns True if string is a number. """
     if re.match("^\d+?\.\d+?$", s) is None:
         return s.isdigit()
     return True
@@ -111,5 +110,5 @@ def resultado():
 
     return df_resultado[cols_resultado]
 
-df_resultad = resultado()
+df_resultado = resultado()
 df_resultado.to_csv('Resultado_Serpro_2023.csv',encoding='utf-8-sig')
