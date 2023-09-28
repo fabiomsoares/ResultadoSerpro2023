@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 file_resultado_objetivo = "ResultadoSerpro2023Objetiva.txt"
-file_resultado_pratica = "ResultadoSerpro2023Pratica.txt"
+file_resultado_pratica = "ResultadoSerpro2023PraticaDefinitivo.txt"
 
 def is_number_regex(s):
     if re.match("^\d+?\.\d+?$", s) is None:
@@ -81,7 +81,7 @@ def resultado():
                  'AcertosIngl','NotaEstat','AcertosEstat','NotaRacLog',
                  'AcertosRacLog','NotaLegis','AcertosLegis','NotaBasicos',
                  'AcertosBasicos','NotaEspec','AcertosEspec','NotaFinal']
-    cols_pratica = ['Inscrição','Nome','NotaFinal']]
+    cols_pratica = ['Inscrição','Nome','NotaFinal']
     
     df_objetiva = process_data(data_objetiva, cols_objetiva)
     df_pratica = process_data(data_pratica, cols_pratica)
@@ -111,4 +111,4 @@ def resultado():
     return df_resultado[cols_resultado]
 
 df_resultado = resultado()
-df_resultado.to_csv('Resultado_Serpro_2023.csv',encoding='utf-8-sig')
+df_resultado.to_csv('Resultado_Serpro_2023_Definitivo.csv',encoding='utf-8-sig')
